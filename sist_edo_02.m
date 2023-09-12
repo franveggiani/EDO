@@ -34,3 +34,4 @@ function [fy]=f_pend(x,z)
     fy(2,1) = -4 * z(1) + alfa * z(2) + sin(4*x) * 15;
 
 end
+
