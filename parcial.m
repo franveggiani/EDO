@@ -72,13 +72,29 @@ function parcial
 
     display(I12);
 
-    figure(3)
-
     % I11/I12
 
     display(I11/I12);
 
+    %Método simpson
 
+    ISimp = 0;
+
+    for i=1:2:dim-1
+        ISimp = ISimp + (y(1,i) + 4*y(1,i+1) + y(1,i+2)) * (dt/3);
+    endfor
+
+    display(ISimp);
+
+    %Comparación con el de los trapecios para corroborar que esté bien 
+
+    ITrap = 0;
+
+    for i=1:dim-1
+        ITrap = ITrap + ((y(1,i) + y(1,i+1))/2) * dt;
+    endfor
+
+    display(ITrap);
 
 end
 

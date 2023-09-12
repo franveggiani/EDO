@@ -1,0 +1,18 @@
+DERIVADAS
+
+ERROR en derivadas de primer grado: orden 1, grado 2
+
+ERROR en derivadas de segundo grado: orden 2, grado 3
+
+ERROR en derivada segunda: orden 3, grado 4
+
+INTEGRALES
+
+ERROR en métodos de suma de Riemmann: orden 1, grado 1
+
+ERROR en método de Trapecios compuesto: orden 2, grado 2
+
+ERROR en método de Trapecios simples: orden 3, grado 2
+
+ERROR en método Simpson: orden 4, grado 4
+
