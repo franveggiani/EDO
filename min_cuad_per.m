@@ -31,7 +31,7 @@ function [phi] = calcular_matriz_phi(N, dim)
 
     %Se va a completar una matriz de N columnas y N filas. Cada columna corresponde a un vector columna PHI_i dependiendo de la base.
 
-    for i=2 : N 
+    for i=2 : dim 
         if(mod(i, 2) == 0)
             %% Llena columna par con Phi_2k
             for j=1 : N
