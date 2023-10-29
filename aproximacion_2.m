@@ -11,9 +11,7 @@ function aproximacion_2
 
 
   Tp=N*Dt;      %Rango de Abscisas
-  w1=(2*pi)/Tp; %
-
-
+  w1=(2*pi)/Tp; 
 
   %GRAFICA DE FUNCION G
   for k=1:N
@@ -30,17 +28,12 @@ function aproximacion_2
 
   modulo=abs(tdfG);   %modulo
 
-##  fase=angle(tdfG);   %angulo
-
   %Crear un vector de frecuencias
   frecuencias=w1*(0:(N-1));
 
   %Grafica en frecuencias
   figure(2)
   plot(frecuencias(1:N/2), modulo(1:N/2))
-##
-##  figure(3)
-##  plot(frecuencias(1:N/2), fase(1:N/2))
 
   %Matriz PHI
   phi=zeros(N,dim);
@@ -54,10 +47,7 @@ function aproximacion_2
 
   G=phi'*g;
   a=zeros(dim,1);
-##  a(1,1)=G(1)/N;
-##  for k=2:dim
-##      a(k)=G(k)/(N/2);
-##  endfor
+
   a=inv(phi'*phi)*G;  %Otra forma de calcular 'a' mejor
   display(a)
 
