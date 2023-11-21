@@ -1,8 +1,8 @@
 function aprox_nop_1
 
     Td = 5;                 %No nula en el intervalo Td
-    Tp = 4*Td;             %Agrego el cuádruple de puntos %20 puntos
-    N = 4*8;               %Inicialmente N = 8            %32 puntos
+    Tp = 64*Td;             %Agrego el cuádruple de puntos %20 puntos
+    N = 64*8;               %Inicialmente N = 8            %32 puntos
     dt = Tp/N               %Se mantiene constante
 
     t0 = 0;
@@ -63,7 +63,7 @@ function aprox_nop_1
 
     fft_g_abs = abs(fft_g);
 
-    f = 1 * (0:(N/2));
+    f = 1 * (0:(N/2));          %No sé por qué la frecuencia acá es 1, calculo que si no te dicen qué frecuencia f0 hay, entonces usás 1 directamente
 
     figure(4)
     bar(f, fft_g_abs(1:length(f)))

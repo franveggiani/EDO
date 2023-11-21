@@ -22,11 +22,11 @@ function runge_kutta_sistema_01
 
     %RANGE KUTTA
 
-    for j=1: ndt-1
+    for j=1: ndt-1  %N-1
 
         k1 = dt * funcion(y(:,j), t(j));
 
-        tg = t(j) + (dt/(2*w));
+        tg = t(j) + (dt/(2*w)); 
         yg = y(:,j) + k1/(2*w);
 
         k2 = dt * funcion(yg, tg);
